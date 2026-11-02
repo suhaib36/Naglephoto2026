@@ -21,8 +21,8 @@ export const BottomNav: React.FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#121214]/95 backdrop-blur-xl border-t border-white/8 px-3 pt-2 pb-5 transition-all">
-      <div className="max-w-[420px] mx-auto flex items-center justify-around">
+    <nav className="absolute bottom-0 left-0 right-0 z-30 bg-[#121214]/95 backdrop-blur-xl border-t border-white/8 px-3 pt-2 pb-5 transition-all shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+      <div className="w-full flex items-center justify-around">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.tab;

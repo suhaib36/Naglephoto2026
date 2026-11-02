@@ -53,8 +53,12 @@ export const AppContent: React.FC = () => {
   return (
     <IPhoneFrame>
       <Toast />
-      {renderScreen()}
-      {currentScreen === 'main' && <BottomNav />}
+      <div className="flex-1 relative flex flex-col min-h-0 overflow-hidden w-full">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar relative flex flex-col">
+          {renderScreen()}
+        </div>
+        {currentScreen === 'main' && <BottomNav />}
+      </div>
       <PhotoViewerModal />
     </IPhoneFrame>
   );

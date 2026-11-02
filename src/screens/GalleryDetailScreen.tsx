@@ -290,8 +290,8 @@ export const GalleryDetailScreen: React.FC = () => {
 
       {/* Floating Bottom Action Bar (When Photos are Selected) */}
       {selectedCount > 0 && (
-        <div className="fixed bottom-20 left-0 right-0 z-30 px-4 animate-slideUp">
-          <div className="max-w-[393px] mx-auto p-3 rounded-2xl bg-zinc-900/95 border border-amber-400/30 backdrop-blur-xl shadow-2xl flex items-center justify-between gap-2">
+        <div className="absolute bottom-5 left-0 right-0 z-30 px-4 animate-slideUp">
+          <div className="w-full p-3 rounded-2xl bg-zinc-900/95 border border-amber-400/30 backdrop-blur-xl shadow-2xl flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 pl-1">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
               <div>
@@ -329,7 +329,7 @@ export const GalleryDetailScreen: React.FC = () => {
 
       {/* Final Approval Confirmation Dialog */}
       {showApprovalConfirmModal && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
+        <div className="absolute inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
           <div className="w-full max-w-sm rounded-3xl bg-zinc-900 border border-white/10 p-6 space-y-4 shadow-2xl animate-scaleUp">
             <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-6 h-6" />

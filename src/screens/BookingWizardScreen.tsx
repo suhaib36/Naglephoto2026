@@ -509,8 +509,8 @@ export const BookingWizardScreen: React.FC = () => {
 
       {/* Fixed Bottom Action for Steps 1–4 */}
       {step < 5 && (
-        <div className="fixed bottom-0 left-0 right-0 z-30 p-4 bg-[#121214]/95 backdrop-blur-md border-t border-white/8">
-          <div className="max-w-[393px] mx-auto flex items-center justify-between gap-3">
+        <div className="absolute bottom-0 left-0 right-0 z-30 p-4 pb-6 bg-[#121214]/95 backdrop-blur-md border-t border-white/8">
+          <div className="w-full flex items-center justify-between gap-3">
             <button
               onClick={handlePrev}
               className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-zinc-300 font-semibold text-xs active:scale-95 transition-all"

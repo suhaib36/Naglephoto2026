@@ -94,7 +94,7 @@ export const PhotoViewerModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black flex flex-col overflow-hidden text-white animate-fadeIn">
+    <div className="absolute inset-0 z-50 bg-black flex flex-col overflow-hidden text-white animate-fadeIn">
       {/* Top Header Bar */}
       <div className="pt-3 px-4 pb-2.5 bg-black/90 backdrop-blur-md flex items-center justify-between z-20 border-b border-white/10">
         <button
@@ -375,7 +375,7 @@ export const PhotoViewerModal: React.FC = () => {
 
       {/* Confirmation Modal for Single Photo Approval */}
       {showConfirmApproval && (
-        <div className="fixed inset-0 z-60 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="absolute inset-0 z-60 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
           <div className="w-full max-w-sm rounded-3xl bg-zinc-900 border border-white/10 p-6 space-y-4 shadow-2xl">
             <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 text-amber-400 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-6 h-6" />

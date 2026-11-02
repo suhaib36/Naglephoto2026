@@ -76,10 +76,10 @@ export const IPhoneFrame: React.FC<IPhoneFrameProps> = ({ children }) => {
           </div>
         </div>
 
-        {/* Screen Viewport with smooth scroll */}
-        <main className="flex-1 overflow-y-auto overflow-x-hidden relative flex flex-col pb-20 no-scrollbar">
+        {/* Screen Viewport Container - bounds all absolute navigation & overlays within the screen */}
+        <div className="flex-1 overflow-hidden relative flex flex-col min-h-0 w-full">
           {children}
-        </main>
+        </div>
 
         {/* iOS Home Indicator Bar */}
         <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-36 h-1 bg-white/40 rounded-full z-40 pointer-events-none" />
