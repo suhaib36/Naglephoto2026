@@ -391,7 +391,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       title: projectData.title || 'New Photography Request',
       clientCompany: clientProfile.company,
       category: projectData.category || 'Product Photography',
-      thumbnail: projectData.thumbnail || 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+      thumbnail: projectData.thumbnail || '/photos/denim_apparel.png',
       status: 'Request Submitted',
       tabCategory: 'active',
       shootDate: projectData.shootDate || 'TBD (Under Review)',
@@ -425,7 +425,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           senderId: 'studio-joe',
           senderName: 'Joe Nagle',
           senderRole: 'Principal Photographer',
-          senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+          senderAvatar: '/photos/central_camera_chicago.png',
           text: `Hi Marcus, thank you for submitting the "${newProject.title}" request! I am reviewing the project requirements and location logistics. I will follow up with our studio calendar options and quotation shortly.`,
           timestamp: 'Just now',
           isClient: false
@@ -485,7 +485,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         senderId: 'studio-joe',
         senderName: 'Joe Nagle',
         senderRole: 'Principal Photographer',
-        senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+        senderAvatar: '/photos/central_camera_chicago.png',
         text: 'Received your message Marcus! We are on it and will keep you posted here.',
         timestamp: 'Just now',
         isClient: false

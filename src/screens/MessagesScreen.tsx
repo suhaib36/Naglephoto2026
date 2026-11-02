@@ -105,12 +105,12 @@ export const MessagesScreen: React.FC = () => {
         <div className="p-3 rounded-2xl bg-zinc-900/60 border border-white/5 text-center space-y-1">
           <div className="flex justify-center -space-x-2 mb-1.5">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+              src="/photos/central_camera_chicago.png" 
               alt="Joe Nagle" 
               className="w-8 h-8 rounded-full border-2 border-[#121214] object-cover"
             />
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" 
+              src="/photos/mandolin_studio.png" 
               alt="Elena Rostova" 
               className="w-8 h-8 rounded-full border-2 border-[#121214] object-cover"
             />

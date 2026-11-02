@@ -7,6 +7,14 @@ import {
   ServiceCategory
 } from '../types';
 
+export const PHOTO_ASSETS = {
+  mandolin: '/photos/mandolin_studio.png',
+  restaurant: '/photos/restaurant_event.png',
+  garden: '/photos/garden_lifestyle.png',
+  denim: '/photos/denim_apparel.png',
+  centralCamera: '/photos/central_camera_chicago.png',
+};
+
 export const INITIAL_CLIENT_PROFILE: ClientProfile = {
   id: 'client-01',
   name: 'Marcus Vance',
@@ -14,7 +22,7 @@ export const INITIAL_CLIENT_PROFILE: ClientProfile = {
   title: 'Creative Director',
   email: 'm.vance@vanceatelier.com',
   phone: '+1 (312) 555-0194',
-  avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+  avatar: '/photos/central_camera_chicago.png',
   city: 'Chicago, IL',
   notificationsEnabled: {
     galleryUploads: true,
@@ -34,57 +42,57 @@ export const SERVICE_CATEGORIES: {
   {
     id: 'Product Photography',
     name: 'Product Photography',
-    tagline: 'Clean e-commerce silos, creative lifestyle setups & macro detailing.',
-    image: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/Krazy-Glue.jpg-nggid03501-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+    tagline: 'Textural apparel, craftsmanship macro, and commercial studio silos.',
+    image: PHOTO_ASSETS.denim,
     typicalDelivery: '3–5 business days'
   },
   {
     id: 'Advertising Photography',
     name: 'Advertising Photography',
-    tagline: 'High-impact hero visual assets for national campaigns & billboards.',
-    image: 'https://nagleweb.com/wp-content/gallery/homepage/In_Motion_MAIN_Home-Page.JPG?t=1578953960',
+    tagline: 'High-impact commercial campaigns & Chicago architectural heritage.',
+    image: PHOTO_ASSETS.centralCamera,
     typicalDelivery: '5–7 business days'
   },
   {
     id: 'Lifestyle Photography',
     name: 'Lifestyle Photography',
-    tagline: 'Authentic narrative moments, contextual figure shoots & brand stories.',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80',
+    tagline: 'Authentic narrative moments, consumer product staging & garden scenes.',
+    image: PHOTO_ASSETS.garden,
     typicalDelivery: '4–6 business days'
   },
   {
     id: 'Food Photography',
     name: 'Food & Beverage',
-    tagline: 'Culinary styling, craft cocktail visuals & restaurant brand imagery.',
-    image: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+    tagline: 'Wine collections, dining hospitality & culinary ambiance.',
+    image: PHOTO_ASSETS.restaurant,
     typicalDelivery: '3–5 business days'
   },
   {
     id: 'Corporate Photography',
     name: 'Corporate & PR',
-    tagline: 'Annual reports, workspace storytelling & press-ready corporate media.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    tagline: 'Urban architectural storytelling & brand presence in the city.',
+    image: PHOTO_ASSETS.centralCamera,
     typicalDelivery: '2–4 business days'
   },
   {
     id: 'People & Portrait',
     name: 'People & Portraits',
-    tagline: 'Executive portraits, editorial headshots & creative character profiles.',
-    image: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+    tagline: 'Editorial portraits, artisans in action & environmental lifestyle.',
+    image: PHOTO_ASSETS.garden,
     typicalDelivery: '2–3 business days'
   },
   {
     id: 'Event Photography',
     name: 'Event Photography',
-    tagline: 'Galas, brand activations, private exhibitions & corporate summits.',
-    image: 'https://nagleweb.com/wp-content/gallery/personal/cache/bulls_5313__large.jpg-nggid03426-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1582080349',
+    tagline: 'Gala receptions, wine tastings & luxury restaurant activations.',
+    image: PHOTO_ASSETS.restaurant,
     typicalDelivery: '48 hours expedited'
   },
   {
     id: 'Other',
-    name: 'Bespoke Creative Endeavor',
-    tagline: 'Special commissions, architectural shoots & multi-day expeditions.',
-    image: 'https://nagleweb.com/wp-content/gallery/personal/cache/commuter__large.jpg-nggid03431-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1582080349',
+    name: 'Bespoke Craft Commissions',
+    tagline: 'Musical instruments, fine craftsmanship & sculptural lighting.',
+    image: PHOTO_ASSETS.mandolin,
     typicalDelivery: 'Custom schedule'
   }
 ];
@@ -93,28 +101,28 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
   {
     id: 'gal-01',
     projectId: 'proj-01',
-    title: 'Summer Product Campaign',
-    coverImage: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80',
+    title: 'Commercial Denim & Apparel Catalog',
+    coverImage: PHOTO_ASSETS.denim,
     category: 'Product Photography',
     uploadDate: 'Nov 1, 2026',
-    photoCount: 8,
+    photoCount: 4,
     status: 'In Review',
-    description: 'High-end cosmetics and skincare studio lighting series with custom specular reflection and luxury textured backdrops.',
+    description: 'Detailed textile photography highlighting folded denim weave, copper rivets, contrast stitching, and custom leather waistband embossing under studio lighting.',
     photos: [
       {
         id: 'p-101',
         galleryId: 'gal-01',
-        title: 'Minimalist Amber Serum Hero',
-        filename: 'NAGLE_PROD_SUMMER_001.ARW',
-        url: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
+        title: 'Selvage Denim Fold & Texture Detail',
+        filename: 'NAGLE_DENIM_STUDIO_001.ARW',
+        url: PHOTO_ASSETS.denim,
+        thumbnailUrl: PHOTO_ASSETS.denim,
+        aspectRatio: 'square',
         status: 'Awaiting Review',
         isFavorite: true,
         metadata: {
           camera: 'Hasselblad H6D-100c',
-          lens: 'HC 2,2/100mm',
-          aperture: 'f/8.0',
+          lens: 'HC 2,2/100mm Macro',
+          aperture: 'f/11',
           shutter: '1/200s',
           iso: '64',
           resolution: '11600 × 8700 px (100MP)',
@@ -126,24 +134,24 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
             author: 'Joe Nagle',
             role: 'studio',
             timestamp: 'Nov 1, 2:15 PM',
-            text: 'Key light feathered with 3x4 softbox to preserve the glass refraction along the left bevel. Ready for your review.'
+            text: 'Feathered 3x4 softbox raking across the denim weave to emphasize twill diagonal ridges and copper rivet sheen. Ready for review.'
           }
         ]
       },
       {
         id: 'p-102',
         galleryId: 'gal-01',
-        title: 'Hydrating Botanical Mist with Droplets',
-        filename: 'NAGLE_PROD_SUMMER_002.ARW',
-        url: 'https://images.unsplash.com/photo-1608248597359-00109f3e4948?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1608248597359-00109f3e4948?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
+        title: 'Leather Waistband Patch & Stitching',
+        filename: 'NAGLE_DENIM_STUDIO_002.ARW',
+        url: PHOTO_ASSETS.denim,
+        thumbnailUrl: PHOTO_ASSETS.denim,
+        aspectRatio: 'square',
         status: 'Approved',
         isFavorite: true,
         metadata: {
           camera: 'Sony α7R V',
           lens: 'FE 90mm f/2.8 Macro G OSS',
-          aperture: 'f/11',
+          aperture: 'f/13',
           shutter: '1/250s',
           iso: '100',
           resolution: '9504 × 6336 px',
@@ -155,21 +163,21 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
             author: 'Marcus Vance',
             role: 'client',
             timestamp: 'Nov 1, 4:30 PM',
-            text: 'Love the water bead consistency here! Approved for catalog print hero.'
+            text: 'The thread contrast and genuine leather texture look incredible. Approved for catalog hero placement!'
           }
         ]
       },
       {
         id: 'p-103',
         galleryId: 'gal-01',
-        title: 'Matte Clay Jar Flat Lay Composition',
-        filename: 'NAGLE_PROD_SUMMER_003.ARW',
-        url: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'landscape',
+        title: 'Indigo Wash Contrast Study',
+        filename: 'NAGLE_DENIM_STUDIO_003.ARW',
+        url: PHOTO_ASSETS.denim,
+        thumbnailUrl: PHOTO_ASSETS.denim,
+        aspectRatio: 'square',
         status: 'Revision Requested',
         isFavorite: false,
-        revisionNotes: 'Please soften the drop shadow on the bottom right corner and color-match the cap to Pantone 7527 C.',
+        revisionNotes: 'Please slightly soften the shadow under the waistband fold and maintain true indigo dye tone.',
         metadata: {
           camera: 'Hasselblad H6D-100c',
           lens: 'HC 3,5/50mm II',
@@ -185,127 +193,35 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
             author: 'Marcus Vance',
             role: 'client',
             timestamp: 'Nov 1, 5:10 PM',
-            text: 'Drop shadow on the bottom right feels a bit sharp. Can we soften it 15% and verify Pantone 7527 C?'
+            text: 'Can we warm the indigo tone slightly to match the physical fabric swatch in room light?'
           },
           {
             id: 'c-4',
             author: 'Elena (Lead Retoucher)',
             role: 'studio',
             timestamp: 'Nov 1, 5:45 PM',
-            text: 'Working on this layer now. Will update with v2 shortly!'
+            text: 'Adjusting color curve against your provided PANTONE 19-4024 TCX reference now.'
           }
         ]
       },
       {
         id: 'p-104',
         galleryId: 'gal-01',
-        title: 'Artisan Glass Dropper Texture Close-up',
-        filename: 'NAGLE_PROD_SUMMER_004.ARW',
-        url: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
+        title: 'Dual Fold Composition Overhead',
+        filename: 'NAGLE_DENIM_STUDIO_004.ARW',
+        url: PHOTO_ASSETS.denim,
+        thumbnailUrl: PHOTO_ASSETS.denim,
+        aspectRatio: 'square',
         status: 'Awaiting Review',
         isFavorite: false,
         metadata: {
           camera: 'Sony α7R V',
-          lens: 'FE 90mm f/2.8 Macro G OSS',
-          aperture: 'f/5.6',
+          lens: 'FE 50mm f/1.2 GM',
+          aperture: 'f/8.0',
           shutter: '1/320s',
           iso: '80',
           resolution: '9504 × 6336 px',
           colorProfile: 'ProPhoto RGB 16-bit'
-        },
-        comments: []
-      },
-      {
-        id: 'p-105',
-        galleryId: 'gal-01',
-        title: 'Trio Product Assembly on White Marble',
-        filename: 'NAGLE_PROD_SUMMER_005.ARW',
-        url: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'landscape',
-        status: 'Approved',
-        isFavorite: true,
-        metadata: {
-          camera: 'Hasselblad H6D-100c',
-          lens: 'HC 2,2/100mm',
-          aperture: 'f/11',
-          shutter: '1/200s',
-          iso: '100',
-          resolution: '11600 × 8700 px',
-          colorProfile: 'ProPhoto RGB 16-bit'
-        },
-        comments: [
-          {
-            id: 'c-5',
-            author: 'Marcus Vance',
-            role: 'client',
-            timestamp: 'Nov 1, 6:02 PM',
-            text: 'Flawless balance across all three sizes.'
-          }
-        ]
-      },
-      {
-        id: 'p-106',
-        galleryId: 'gal-01',
-        title: 'Monochrome Packaging Studio Silhouette',
-        filename: 'NAGLE_PROD_SUMMER_006.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/05-SAP-permanent-marker-sharpie-pro-fine-blue-product-silo-cap-off-straight-on.jpg-nggid03519-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/05-SAP-permanent-marker-sharpie-pro-fine-blue-product-silo-cap-off-straight-on.jpg-nggid03519-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        aspectRatio: 'landscape',
-        status: 'Awaiting Review',
-        isFavorite: false,
-        metadata: {
-          camera: 'Nikon D850',
-          lens: 'Nikkor 105mm Micro f/2.8',
-          aperture: 'f/16',
-          shutter: '1/250s',
-          iso: '64',
-          resolution: '8256 × 5504 px',
-          colorProfile: 'Adobe RGB (1998)'
-        },
-        comments: []
-      },
-      {
-        id: 'p-107',
-        galleryId: 'gal-01',
-        title: 'Sculptural Furniture Detail (Nagle Archival)',
-        filename: 'NAGLE_PROD_SUMMER_007.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/chalked_country_grey_dresser_after_pick__large.jpg-nggid03511-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/chalked_country_grey_dresser_after_pick__large.jpg-nggid03511-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        aspectRatio: 'landscape',
-        status: 'Approved',
-        isFavorite: false,
-        metadata: {
-          camera: 'Nikon D850',
-          lens: 'Nikkor 45mm PC-E Tilt-Shift',
-          aperture: 'f/8.0',
-          shutter: '1/125s',
-          iso: '100',
-          resolution: '8256 × 5504 px',
-          colorProfile: 'Adobe RGB'
-        },
-        comments: []
-      },
-      {
-        id: 'p-108',
-        galleryId: 'gal-01',
-        title: 'Precision Bonding Macro (Nagle Original)',
-        filename: 'NAGLE_PROD_SUMMER_008.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/Krazy-Glue.jpg-nggid03501-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/Krazy-Glue.jpg-nggid03501-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        aspectRatio: 'landscape',
-        status: 'Awaiting Review',
-        isFavorite: false,
-        metadata: {
-          camera: 'Nikon D850',
-          lens: 'Nikkor 105mm Micro f/2.8',
-          aperture: 'f/16',
-          shutter: '1/250s',
-          iso: '64',
-          resolution: '8256 × 5504 px',
-          colorProfile: 'Adobe RGB'
         },
         comments: []
       }
@@ -314,29 +230,29 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
   {
     id: 'gal-02',
     projectId: 'proj-02',
-    title: 'Lifestyle Photography Collection',
-    coverImage: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80',
+    title: 'Outdoor Garden & Lawn Care Lifestyle',
+    coverImage: PHOTO_ASSETS.garden,
     category: 'Lifestyle Photography',
     uploadDate: 'Oct 28, 2026',
-    photoCount: 6,
+    photoCount: 3,
     status: 'In Review',
-    description: 'Autumn luxury outerwear collection captured across Chicago urban architectural landmarks and golden hour locations.',
+    description: 'Contextual on-location shoot showcasing lawn & garden utility cart, gardening accessories, vibrant floral landscaping, and consumer interaction.',
     photos: [
       {
         id: 'p-201',
         galleryId: 'gal-02',
-        title: 'Urban Trench Coat — Michigan Avenue Bridge',
-        filename: 'NAGLE_LIFE_CHI_001.ARW',
-        url: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
+        title: 'Gardener Tending Red Petunias with Utility Cart',
+        filename: 'NAGLE_GARDEN_LIFE_001.ARW',
+        url: PHOTO_ASSETS.garden,
+        thumbnailUrl: PHOTO_ASSETS.garden,
+        aspectRatio: 'landscape',
         status: 'Approved',
         isFavorite: true,
         metadata: {
           camera: 'Sony α1',
           lens: 'FE 50mm f/1.2 GM',
-          aperture: 'f/2.0',
-          shutter: '1/1600s',
+          aperture: 'f/4.0',
+          shutter: '1/800s',
           iso: '100',
           resolution: '8640 × 5760 px',
           colorProfile: 'Display P3'
@@ -347,24 +263,24 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
             author: 'Joe Nagle',
             role: 'studio',
             timestamp: 'Oct 28, 11:15 AM',
-            text: 'Natural golden bounce off the Wrigley Building sandstone facade. Client favorite from the morning set.'
+            text: 'Natural midday diffused sunlight highlights the red blossoms and product storage capacity on the black utility cart.'
           }
         ]
       },
       {
         id: 'p-202',
         galleryId: 'gal-02',
-        title: 'Tailored Cashmere Silhouette',
-        filename: 'NAGLE_LIFE_CHI_002.ARW',
-        url: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
+        title: 'Lawn Cart Storage & Accessories Detail',
+        filename: 'NAGLE_GARDEN_LIFE_002.ARW',
+        url: PHOTO_ASSETS.garden,
+        thumbnailUrl: PHOTO_ASSETS.garden,
+        aspectRatio: 'landscape',
         status: 'Awaiting Review',
         isFavorite: false,
         metadata: {
           camera: 'Sony α1',
           lens: 'FE 85mm f/1.4 GM II',
-          aperture: 'f/2.2',
+          aperture: 'f/3.5',
           shutter: '1/1000s',
           iso: '125',
           resolution: '8640 × 5760 px',
@@ -375,85 +291,21 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
       {
         id: 'p-203',
         galleryId: 'gal-02',
-        title: 'Dynamic City Transit Walk (Nagle Commuter Series)',
-        filename: 'NAGLE_LIFE_CHI_003.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/personal/cache/commuter__large.jpg-nggid03431-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1582080349',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/personal/cache/commuter__large.jpg-nggid03431-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1582080349',
+        title: 'Full Backyard Contextual Staging',
+        filename: 'NAGLE_GARDEN_LIFE_003.ARW',
+        url: PHOTO_ASSETS.garden,
+        thumbnailUrl: PHOTO_ASSETS.garden,
         aspectRatio: 'landscape',
         status: 'Approved',
         isFavorite: true,
         metadata: {
           camera: 'Canon EOS 5D Mark IV',
           lens: 'EF 35mm f/1.4L II USM',
-          aperture: 'f/4.0',
-          shutter: '1/320s',
-          iso: '200',
+          aperture: 'f/5.6',
+          shutter: '1/500s',
+          iso: '160',
           resolution: '6720 × 4480 px',
           colorProfile: 'sRGB'
-        },
-        comments: []
-      },
-      {
-        id: 'p-204',
-        galleryId: 'gal-02',
-        title: 'Studio On-Figure Knitwear Portrait',
-        filename: 'NAGLE_LIFE_CHI_004.ARW',
-        url: 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
-        status: 'Revision Requested',
-        isFavorite: false,
-        revisionNotes: 'Please touch up slight stray hair strands on the left temple and ensure wool knit color is neutral charcoal.',
-        metadata: {
-          camera: 'Sony α7R V',
-          lens: 'FE 70-200mm f/2.8 GM OSS II',
-          aperture: 'f/5.6',
-          shutter: '1/200s',
-          iso: '100',
-          resolution: '9504 × 6336 px',
-          colorProfile: 'Display P3'
-        },
-        comments: []
-      },
-      {
-        id: 'p-205',
-        galleryId: 'gal-02',
-        title: 'Classic Wool Overcoat Movement',
-        filename: 'NAGLE_LIFE_CHI_005.ARW',
-        url: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
-        status: 'Awaiting Review',
-        isFavorite: false,
-        metadata: {
-          camera: 'Sony α1',
-          lens: 'FE 50mm f/1.2 GM',
-          aperture: 'f/2.8',
-          shutter: '1/800s',
-          iso: '100',
-          resolution: '8640 × 5760 px',
-          colorProfile: 'Display P3'
-        },
-        comments: []
-      },
-      {
-        id: 'p-206',
-        galleryId: 'gal-02',
-        title: 'Minimalist Architecture & Model Perspective',
-        filename: 'NAGLE_LIFE_CHI_006.ARW',
-        url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'portrait',
-        status: 'Approved',
-        isFavorite: true,
-        metadata: {
-          camera: 'Sony α1',
-          lens: 'FE 85mm f/1.4 GM II',
-          aperture: 'f/2.0',
-          shutter: '1/1250s',
-          iso: '100',
-          resolution: '8640 × 5760 px',
-          colorProfile: 'Display P3'
         },
         comments: []
       }
@@ -461,83 +313,83 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
   },
   {
     id: 'gal-03',
-    projectId: 'proj-04',
-    title: 'Culinary Artisanal Menu Series',
-    coverImage: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-    category: 'Food Photography',
-    uploadDate: 'Oct 14, 2026',
-    photoCount: 5,
-    status: 'All Approved',
-    description: 'Michelin star restaurant plating, smoke captures, and bar cocktail hero stills.',
+    projectId: 'proj-03',
+    title: 'Chicago Architectural Heritage — Central Camera Co.',
+    coverImage: PHOTO_ASSETS.centralCamera,
+    category: 'Advertising Photography',
+    uploadDate: 'Oct 25, 2026',
+    photoCount: 3,
+    status: 'In Review',
+    description: 'Iconic streetscape portrait of Central Camera Co. (Since 1899) on Wabash Avenue, Chicago, featuring historic marquee, street frontage, and Joe Nagle studio signature.',
     photos: [
       {
         id: 'p-301',
         galleryId: 'gal-03',
-        title: 'Artisan Yakitori Charcoal Flame (Nagle Original)',
-        filename: 'NAGLE_CULINARY_001.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        aspectRatio: 'landscape',
-        status: 'Final Approved',
+        title: 'Central Camera Co. Storefront Heritage (Nagle Signature)',
+        filename: 'NAGLE_CENTRAL_CAMERA_001.ARW',
+        url: PHOTO_ASSETS.centralCamera,
+        thumbnailUrl: PHOTO_ASSETS.centralCamera,
+        aspectRatio: 'portrait',
+        status: 'Approved',
         isFavorite: true,
         metadata: {
-          camera: 'Canon EOS-1D X Mark III',
-          lens: 'EF 24-70mm f/2.8L II USM',
-          aperture: 'f/4.0',
-          shutter: '1/250s',
-          iso: '400',
-          resolution: '5472 × 3648 px',
+          camera: 'Nikon D850',
+          lens: 'Nikkor 24-70mm f/2.8E ED VR',
+          aperture: 'f/4.5',
+          shutter: '1/320s',
+          iso: '100',
+          resolution: '8256 × 5504 px',
           colorProfile: 'Adobe RGB'
         },
         comments: [
           {
             id: 'c-301',
-            author: 'Marcus Vance',
-            role: 'client',
-            timestamp: 'Oct 15, 10:00 AM',
-            text: 'Stunning capture of the charcoal glow. Client printed for menu feature.'
+            author: 'Joe Nagle',
+            role: 'studio',
+            timestamp: 'Oct 25, 3:30 PM',
+            text: 'Chicago architectural staple on Wabash Ave. Authentic Nagle studio watermark embedded on proof.'
           }
         ]
       },
       {
         id: 'p-302',
         galleryId: 'gal-03',
-        title: 'Espresso Crema Pour & Roasted Beans (Nagle Original)',
-        filename: 'NAGLE_CULINARY_002.ARW',
-        url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80',
+        title: 'Vintage Neon Marquee Detail Study',
+        filename: 'NAGLE_CENTRAL_CAMERA_002.ARW',
+        url: PHOTO_ASSETS.centralCamera,
+        thumbnailUrl: PHOTO_ASSETS.centralCamera,
         aspectRatio: 'portrait',
-        status: 'Final Approved',
-        isFavorite: false,
+        status: 'Awaiting Review',
+        isFavorite: true,
         metadata: {
-          camera: 'Sony α7R V',
-          lens: 'FE 90mm f/2.8 Macro',
-          aperture: 'f/3.5',
+          camera: 'Nikon D850',
+          lens: 'Nikkor 70-200mm f/2.8E FL ED',
+          aperture: 'f/4.0',
           shutter: '1/400s',
-          iso: '200',
-          resolution: '9504 × 6336 px',
-          colorProfile: 'Display P3'
+          iso: '100',
+          resolution: '8256 × 5504 px',
+          colorProfile: 'Adobe RGB'
         },
         comments: []
       },
       {
         id: 'p-303',
         galleryId: 'gal-03',
-        title: 'Modern Japanese Plating Presentation',
-        filename: 'NAGLE_CULINARY_003.ARW',
-        url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=85',
-        thumbnailUrl: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80',
-        aspectRatio: 'landscape',
-        status: 'Final Approved',
-        isFavorite: true,
+        title: 'Street Level Urban Perspective',
+        filename: 'NAGLE_CENTRAL_CAMERA_003.ARW',
+        url: PHOTO_ASSETS.centralCamera,
+        thumbnailUrl: PHOTO_ASSETS.centralCamera,
+        aspectRatio: 'portrait',
+        status: 'Approved',
+        isFavorite: false,
         metadata: {
-          camera: 'Sony α7R V',
-          lens: 'FE 50mm f/1.2 GM',
-          aperture: 'f/4.0',
+          camera: 'Nikon D850',
+          lens: 'Nikkor 35mm f/1.4G',
+          aperture: 'f/5.6',
           shutter: '1/250s',
-          iso: '160',
-          resolution: '9504 × 6336 px',
-          colorProfile: 'Display P3'
+          iso: '100',
+          resolution: '8256 × 5504 px',
+          colorProfile: 'Adobe RGB'
         },
         comments: []
       }
@@ -545,54 +397,167 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
   },
   {
     id: 'gal-04',
-    projectId: 'proj-05',
-    title: 'Executive Portrait & Leadership Suite',
-    coverImage: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-    category: 'People & Portrait',
-    uploadDate: 'Oct 02, 2026',
-    photoCount: 4,
+    projectId: 'proj-04',
+    title: 'Handcrafted Archtop Mandolin Studio Shoot',
+    coverImage: PHOTO_ASSETS.mandolin,
+    category: 'Product Photography',
+    uploadDate: 'Oct 14, 2026',
+    photoCount: 3,
     status: 'All Approved',
-    description: 'Chicago leadership studio portraits with sculpted Rembrandt lighting and fine-art monochromatic grade.',
+    description: 'Fine instrument studio photography with dramatic blue specular lighting, sculpted maple sides, carved f-hole, and sunburst lacquer reflection.',
     photos: [
       {
         id: 'p-401',
         galleryId: 'gal-04',
-        title: 'Rick Bayless — Renowned Chef & Restaurateur (Nagle Original)',
-        filename: 'NAGLE_PORTRAIT_001.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+        title: 'Sunburst Archtop Mandolin & Blue Key Light',
+        filename: 'NAGLE_MANDOLIN_STUDIO_001.ARW',
+        url: PHOTO_ASSETS.mandolin,
+        thumbnailUrl: PHOTO_ASSETS.mandolin,
         aspectRatio: 'portrait',
         status: 'Final Approved',
         isFavorite: true,
         metadata: {
-          camera: 'Nikon D850',
-          lens: 'Nikkor 85mm f/1.4G',
-          aperture: 'f/4.0',
-          shutter: '1/200s',
+          camera: 'Hasselblad H6D-100c',
+          lens: 'HC 2,2/100mm',
+          aperture: 'f/11',
+          shutter: '1/125s',
           iso: '64',
-          resolution: '8256 × 5504 px',
-          colorProfile: 'Adobe RGB'
+          resolution: '11600 × 8700 px (100MP)',
+          colorProfile: 'ProPhoto RGB 16-bit'
         },
-        comments: []
+        comments: [
+          {
+            id: 'c-401',
+            author: 'Marcus Vance',
+            role: 'client',
+            timestamp: 'Oct 15, 10:00 AM',
+            text: 'The blue edge lighting gradient against the amber wood finish is an absolute masterpiece.'
+          }
+        ]
       },
       {
         id: 'p-402',
         galleryId: 'gal-04',
-        title: 'Akihiko Takashi Sensei B&W Study (Nagle Original)',
-        filename: 'NAGLE_PORTRAIT_002.ARW',
-        url: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/11.12.19_Akihiko_Takashi_Sensei_session7740BW.jpg-nggid03494-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
-        thumbnailUrl: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/11.12.19_Akihiko_Takashi_Sensei_session7740BW.jpg-nggid03494-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+        title: 'Engraved Tailpiece & Volume Knob Detail',
+        filename: 'NAGLE_MANDOLIN_STUDIO_002.ARW',
+        url: PHOTO_ASSETS.mandolin,
+        thumbnailUrl: PHOTO_ASSETS.mandolin,
         aspectRatio: 'portrait',
         status: 'Final Approved',
         isFavorite: true,
         metadata: {
-          camera: 'Nikon D850',
-          lens: 'Nikkor 70-200mm f/2.8E FL ED VR',
-          aperture: 'f/3.2',
-          shutter: '1/250s',
-          iso: '100',
-          resolution: '8256 × 5504 px',
-          colorProfile: 'Adobe RGB Monochrome'
+          camera: 'Sony α7R V',
+          lens: 'FE 90mm f/2.8 Macro',
+          aperture: 'f/14',
+          shutter: '1/160s',
+          iso: '80',
+          resolution: '9504 × 6336 px',
+          colorProfile: 'Display P3'
+        },
+        comments: []
+      },
+      {
+        id: 'p-403',
+        galleryId: 'gal-04',
+        title: 'Carved F-Hole Specular Gradient',
+        filename: 'NAGLE_MANDOLIN_STUDIO_003.ARW',
+        url: PHOTO_ASSETS.mandolin,
+        thumbnailUrl: PHOTO_ASSETS.mandolin,
+        aspectRatio: 'portrait',
+        status: 'Final Approved',
+        isFavorite: false,
+        metadata: {
+          camera: 'Hasselblad H6D-100c',
+          lens: 'HC 2,2/100mm',
+          aperture: 'f/9.0',
+          shutter: '1/200s',
+          iso: '64',
+          resolution: '11600 × 8700 px',
+          colorProfile: 'ProPhoto RGB'
+        },
+        comments: []
+      }
+    ]
+  },
+  {
+    id: 'gal-05',
+    projectId: 'proj-05',
+    title: 'Private Reserve Wine Bar & Evening Hospitality',
+    coverImage: PHOTO_ASSETS.restaurant,
+    category: 'Food Photography',
+    uploadDate: 'Oct 02, 2026',
+    photoCount: 3,
+    status: 'All Approved',
+    description: 'Dynamic event and fine dining ambiance capture showcasing champagne ice buckets, curated wine bottles, and motion-blurred server service.',
+    photos: [
+      {
+        id: 'p-501',
+        galleryId: 'gal-05',
+        title: 'Sommelier Wine Station & Chilled Bottles',
+        filename: 'NAGLE_HOSPITALITY_001.ARW',
+        url: PHOTO_ASSETS.restaurant,
+        thumbnailUrl: PHOTO_ASSETS.restaurant,
+        aspectRatio: 'landscape',
+        status: 'Final Approved',
+        isFavorite: true,
+        metadata: {
+          camera: 'Sony α1',
+          lens: 'FE 35mm f/1.4 GM',
+          aperture: 'f/2.8',
+          shutter: '1/15s (Intentional Motion Blur)',
+          iso: '800',
+          resolution: '8640 × 5760 px',
+          colorProfile: 'Display P3'
+        },
+        comments: [
+          {
+            id: 'c-501',
+            author: 'Joe Nagle',
+            role: 'studio',
+            timestamp: 'Oct 03, 11:20 AM',
+            text: 'Slow shutter speed captures kinetic motion of the service team while holding the wine display in crisp focus.'
+          }
+        ]
+      },
+      {
+        id: 'p-502',
+        galleryId: 'gal-05',
+        title: 'Stainless Ice Buckets & Champagne Presentation',
+        filename: 'NAGLE_HOSPITALITY_002.ARW',
+        url: PHOTO_ASSETS.restaurant,
+        thumbnailUrl: PHOTO_ASSETS.restaurant,
+        aspectRatio: 'landscape',
+        status: 'Final Approved',
+        isFavorite: true,
+        metadata: {
+          camera: 'Sony α1',
+          lens: 'FE 50mm f/1.2 GM',
+          aperture: 'f/2.0',
+          shutter: '1/60s',
+          iso: '640',
+          resolution: '8640 × 5760 px',
+          colorProfile: 'Display P3'
+        },
+        comments: []
+      },
+      {
+        id: 'p-503',
+        galleryId: 'gal-05',
+        title: 'Evening Dining Room Lounge Atmosphere',
+        filename: 'NAGLE_HOSPITALITY_003.ARW',
+        url: PHOTO_ASSETS.restaurant,
+        thumbnailUrl: PHOTO_ASSETS.restaurant,
+        aspectRatio: 'landscape',
+        status: 'Final Approved',
+        isFavorite: false,
+        metadata: {
+          camera: 'Sony α1',
+          lens: 'FE 24-70mm f/2.8 GM II',
+          aperture: 'f/2.8',
+          shutter: '1/50s',
+          iso: '1200',
+          resolution: '8640 × 5760 px',
+          colorProfile: 'Display P3'
         },
         comments: []
       }
@@ -603,175 +568,175 @@ export const INITIAL_GALLERIES: GalleryItem[] = [
 export const INITIAL_PROJECTS: ProjectItem[] = [
   {
     id: 'proj-01',
-    title: 'Summer Product Campaign',
+    title: 'Commercial Denim & Apparel Catalog',
     clientCompany: 'Vance & Co. Luxury Goods',
     category: 'Product Photography',
-    thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+    thumbnail: PHOTO_ASSETS.denim,
     status: 'Client Review',
     tabCategory: 'active',
     shootDate: 'Oct 29, 2026',
     shootTime: '9:00 AM – 3:30 PM CST',
     shootType: 'Studio',
     locationAddress: 'Nagle Photography Studio, 1420 W Fulton Market, Chicago, IL 60607',
-    description: 'Comprehensive studio product campaign featuring our botanical skincare bottles, amber glass serums, and matte packaging series for Q4 print and digital launches.',
-    estimatedPhotos: 24,
-    budgetQuote: '$4,850.00 USD (Includes Studio, Lighting Tech & Retouching)',
+    description: 'Detailed textile photography highlighting folded denim weave, copper rivets, contrast stitching, and custom leather waistband embossing under studio lighting.',
+    estimatedPhotos: 16,
+    budgetQuote: '$4,250.00 USD (Includes Studio, Fabric Styling & Retouching)',
     createdDate: 'Oct 18, 2026',
     galleryId: 'gal-01',
     timeline: [
-      { step: 1, label: 'Request Submitted', description: 'Brief and mood board submitted by Vance & Co.', date: 'Oct 18', completed: true, current: false },
-      { step: 2, label: 'Project Confirmed', description: 'Quote approved & shoot dates reserved.', date: 'Oct 20', completed: true, current: false },
-      { step: 3, label: 'Photography Shoot', description: 'Studio day completed with Joe Nagle & styling crew.', date: 'Oct 29', completed: true, current: false },
-      { step: 4, label: 'Photos Uploaded', description: 'Raw proofs color-graded & proof gallery published.', date: 'Nov 1', completed: true, current: false },
-      { step: 5, label: 'Client Review', description: 'Selecting hero shots & requesting retouching adjustments.', date: 'In Progress', completed: false, current: true },
-      { step: 6, label: 'Final Delivery', description: 'Full resolution TIFFs & web assets packaged with license.', completed: false, current: false },
+      { step: 1, label: 'Request Submitted', description: 'Apparel brief and sample garments received.', date: 'Oct 18', completed: true, current: false },
+      { step: 2, label: 'Project Confirmed', description: 'Studio hold locked & lighting test completed.', date: 'Oct 20', completed: true, current: false },
+      { step: 3, label: 'Photography Shoot', description: 'Studio textile lighting day wrapped.', date: 'Oct 29', completed: true, current: false },
+      { step: 4, label: 'Photos Uploaded', description: 'Proof gallery uploaded for client review.', date: 'Nov 1', completed: true, current: false },
+      { step: 5, label: 'Client Review', description: 'Color calibration & stitch detail inspection.', date: 'In Progress', completed: false, current: true },
+      { step: 6, label: 'Final Delivery', description: 'Ultra-res TIFF catalog exports packaging.', completed: false, current: false },
     ],
     requirements: [
-      'High-resolution 100MP captures on pure neutral white (#FFFFFF) background and natural marble stone textures.',
-      'Specular highlight alignment along curved bottle shoulders.',
-      'Separation of dropper glass reflection with transparent alpha clipping paths.',
-      'Deliverables in 16-bit ProPhoto TIFF + sRGB Web Optimized JPEG.'
+      'High-resolution 100MP captures showing textile thread weave depth.',
+      'Raking sidelight to emphasize diagonal twill ridges.',
+      'Accurate Pantone fabric color reproduction for digital catalog.',
+      'Clipping masks for e-commerce catalog layout.'
     ],
     referenceImages: [
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1608248597359-00109f3e4948?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80'
+      PHOTO_ASSETS.denim,
+      PHOTO_ASSETS.mandolin
     ]
   },
   {
     id: 'proj-02',
-    title: 'Lifestyle Photography Collection',
-    clientCompany: 'Vance & Co. Luxury Goods',
+    title: 'Outdoor Garden & Lawn Care Lifestyle',
+    clientCompany: 'Vance Living & Home',
     category: 'Lifestyle Photography',
-    thumbnail: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80',
+    thumbnail: PHOTO_ASSETS.garden,
     status: 'Photos Uploaded',
     tabCategory: 'active',
     shootDate: 'Oct 24, 2026',
-    shootTime: '7:30 AM – 1:00 PM CST',
+    shootTime: '8:00 AM – 1:30 PM CST',
     shootType: 'On Location',
-    locationAddress: 'Michigan Avenue Bridge & Chicago Riverwalk, Chicago, IL 60601',
-    description: 'Editorial urban lifestyle shoot capturing high-end outerwear and accessories in authentic downtown Chicago morning light.',
-    estimatedPhotos: 18,
-    budgetQuote: '$5,400.00 USD (Includes Location Permits & 2 Models)',
+    locationAddress: 'Lincoln Park Residential Garden, Chicago, IL 60614',
+    description: 'Contextual on-location lifestyle shoot showcasing consumer multi-tier utility garden carts in active use with lawn care tools and vibrant red petunias.',
+    estimatedPhotos: 12,
+    budgetQuote: '$3,800.00 USD (Includes Location Permit & On-Set Stylist)',
     createdDate: 'Oct 12, 2026',
     galleryId: 'gal-02',
     timeline: [
-      { step: 1, label: 'Request Submitted', description: 'Creative brief received for Fall Lookbook.', date: 'Oct 12', completed: true, current: false },
-      { step: 2, label: 'Project Confirmed', description: 'Talent booked & riverwalk permits secured.', date: 'Oct 16', completed: true, current: false },
-      { step: 3, label: 'Photography Shoot', description: 'Multi-location morning shoot wrapped.', date: 'Oct 24', completed: true, current: false },
-      { step: 4, label: 'Photos Uploaded', description: 'Proof gallery uploaded for client review.', date: 'Oct 28', completed: true, current: true },
+      { step: 1, label: 'Request Submitted', description: 'Lawn care product launch brief.', date: 'Oct 12', completed: true, current: false },
+      { step: 2, label: 'Project Confirmed', description: 'Residential garden location secured.', date: 'Oct 16', completed: true, current: false },
+      { step: 3, label: 'Photography Shoot', description: 'Morning daylight production wrapped.', date: 'Oct 24', completed: true, current: false },
+      { step: 4, label: 'Photos Uploaded', description: 'Proofs uploaded to private gallery.', date: 'Oct 28', completed: true, current: true },
       { step: 5, label: 'Client Review', description: 'Awaiting client image selection.', completed: false, current: false },
       { step: 6, label: 'Final Delivery', description: 'High-res master files release.', completed: false, current: false },
     ],
     requirements: [
-      'Natural architectural angles incorporating limestone and river reflections.',
-      'Candid walking and motion poses showcasing trench coat movement.',
-      'Color tone: subdued cinematic warm palette consistent with brand guidelines.'
+      'Natural outdoor morning sunlight with clean highlight fill.',
+      'Demonstrate capacity and utility of the cart with real gardening tools.',
+      'Rich contrast with natural greenery and vibrant red petunias.'
     ],
     referenceImages: [
-      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=400&q=80'
+      PHOTO_ASSETS.garden,
+      PHOTO_ASSETS.centralCamera
     ]
   },
   {
     id: 'proj-03',
-    title: 'Spring Advertising Campaign',
-    clientCompany: 'Vance & Co. Luxury Goods',
+    title: 'Chicago Architectural Heritage — Central Camera Co.',
+    clientCompany: 'Vance Heritage Foundation',
     category: 'Advertising Photography',
-    thumbnail: 'https://nagleweb.com/wp-content/gallery/homepage/In_Motion_MAIN_Home-Page.JPG?t=1578953960',
+    thumbnail: PHOTO_ASSETS.centralCamera,
     status: 'Confirmed',
     tabCategory: 'upcoming',
     shootDate: 'Nov 18, 2026',
-    shootTime: '8:30 AM – 5:00 PM CST',
-    shootType: 'Studio',
-    locationAddress: 'Nagle Main Stage, 1420 W Fulton Market, Chicago, IL 60607',
-    description: 'Flagship advertising campaign for Spring/Summer product line. Multi-set production involving high-speed sync strobe systems and live art direction monitor feeds.',
-    estimatedPhotos: 32,
-    budgetQuote: '$7,250.00 USD (Full Day Production + Equipment Rig)',
+    shootTime: '10:00 AM – 4:00 PM CST',
+    shootType: 'On Location',
+    locationAddress: '230 S Wabash Ave, Chicago, IL 60604',
+    description: 'Iconic streetscape portrait of Central Camera Co. (Since 1899) on Wabash Avenue, Chicago, featuring historic marquee, street frontage, and Joe Nagle studio signature.',
+    estimatedPhotos: 20,
+    budgetQuote: '$5,200.00 USD (Location Production & Archival Prints)',
     createdDate: 'Oct 25, 2026',
+    galleryId: 'gal-03',
     timeline: [
-      { step: 1, label: 'Request Submitted', description: 'Campaign brief & storyboard delivered.', date: 'Oct 25', completed: true, current: false },
-      { step: 2, label: 'Project Confirmed', description: 'Deposit received & stage hold confirmed.', date: 'Oct 30', completed: true, current: true },
+      { step: 1, label: 'Request Submitted', description: 'Chicago landmark series proposal.', date: 'Oct 25', completed: true, current: false },
+      { step: 2, label: 'Project Confirmed', description: 'Street permit and scheduling confirmed.', date: 'Oct 30', completed: true, current: true },
       { step: 3, label: 'Photography Shoot', description: 'Scheduled for Nov 18, 2026.', date: 'Upcoming', completed: false, current: false },
-      { step: 4, label: 'Photos Uploaded', description: 'Next day private proofing.', completed: false, current: false },
-      { step: 5, label: 'Client Review', description: 'Client review and retouch approval.', completed: false, current: false },
-      { step: 6, label: 'Final Delivery', description: 'Full asset pack delivery.', completed: false, current: false },
+      { step: 4, label: 'Photos Uploaded', description: 'Same-day proof delivery.', completed: false, current: false },
+      { step: 5, label: 'Client Review', description: 'Archival print selections.', completed: false, current: false },
+      { step: 6, label: 'Final Delivery', description: 'Master gallery delivery.', completed: false, current: false },
     ],
     requirements: [
-      'High-speed strobe lighting rig to capture liquid splash dynamics.',
-      'Tethered live review directly to client iPad monitors on set.',
-      'Deliverables calibrated for large-format billboard print specs.'
+      'Capture historic neon signage with architectural tilt-shift perspective.',
+      'Preserve authentic Chicago urban street character and textures.',
+      'Master print files formatted for large-scale exhibition displays.'
     ],
     referenceImages: [
-      'https://nagleweb.com/wp-content/gallery/homepage/In_Motion_MAIN_Home-Page.JPG?t=1578953960'
+      PHOTO_ASSETS.centralCamera
     ]
   },
   {
     id: 'proj-04',
-    title: 'Culinary Artisanal Menu Series',
-    clientCompany: 'Vance Hospitality Group',
-    category: 'Food Photography',
-    thumbnail: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+    title: 'Handcrafted Archtop Mandolin Studio Shoot',
+    clientCompany: 'Vance Artisan Instrument Guild',
+    category: 'Product Photography',
+    thumbnail: PHOTO_ASSETS.mandolin,
     status: 'Final Approved',
     tabCategory: 'completed',
     shootDate: 'Oct 10, 2026',
-    shootTime: '10:00 AM – 3:00 PM CST',
-    shootType: 'On Location',
-    locationAddress: 'Koto Robata & Grill, 830 N Michigan Ave, Chicago, IL 60611',
-    description: 'Sensory gastronomy shoot focusing on robata charcoal grilling, delicate sashimi textures, and signature cocktail pairings.',
-    estimatedPhotos: 15,
-    budgetQuote: '$3,600.00 USD (Completed & Paid)',
+    shootTime: '1:00 PM – 5:30 PM CST',
+    shootType: 'Studio',
+    locationAddress: 'Nagle Photography Studio, 1420 W Fulton Market, Chicago, IL 60607',
+    description: 'Fine instrument studio photography with dramatic blue specular lighting, sculpted maple sides, carved f-hole, and sunburst lacquer reflection.',
+    estimatedPhotos: 10,
+    budgetQuote: '$3,400.00 USD (Completed & Paid)',
     createdDate: 'Sep 28, 2026',
-    galleryId: 'gal-03',
+    galleryId: 'gal-04',
     timeline: [
-      { step: 1, label: 'Request Submitted', description: 'Menu list and plating concept sent.', date: 'Sep 28', completed: true, current: false },
-      { step: 2, label: 'Project Confirmed', description: 'Kitchen prep schedule matched.', date: 'Oct 02', completed: true, current: false },
-      { step: 3, label: 'Photography Shoot', description: 'Live on-location kitchen shoot.', date: 'Oct 10', completed: true, current: false },
-      { step: 4, label: 'Photos Uploaded', description: 'Proofs delivered.', date: 'Oct 14', completed: true, current: false },
-      { step: 5, label: 'Client Review', description: 'All selections approved.', date: 'Oct 16', completed: true, current: false },
-      { step: 6, label: 'Final Delivery', description: 'Ultra-res print files delivered.', date: 'Oct 18', completed: true, current: false },
+      { step: 1, label: 'Request Submitted', description: 'Luthier showcase specifications.', date: 'Sep 28', completed: true, current: false },
+      { step: 2, label: 'Project Confirmed', description: 'Custom blue gel lighting rig set.', date: 'Oct 02', completed: true, current: false },
+      { step: 3, label: 'Photography Shoot', description: 'High-end macro & rim light shoot wrapped.', date: 'Oct 10', completed: true, current: false },
+      { step: 4, label: 'Photos Uploaded', description: 'Proofs reviewed.', date: 'Oct 14', completed: true, current: false },
+      { step: 5, label: 'Client Review', description: 'All selects approved.', date: 'Oct 15', completed: true, current: false },
+      { step: 6, label: 'Final Delivery', description: 'Delivered in 100MP ProPhoto format.', date: 'Oct 16', completed: true, current: false },
     ],
     requirements: [
-      'Capture authentic hot smoke rising from Binchotan coals.',
-      'Shallow depth of field for elegant textural focus.',
-      'Full commercial usage rights for Chicago Tribune feature & web menu.'
+      'Precise specular highlight roll-off across the curved archtop soundboard.',
+      'Deep sapphire blue gradient background separating instrument body.',
+      'Macro capture of engraved nickel tailpiece.'
     ],
     referenceImages: [
-      'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/yakitori_boogytori_img_2274__large.jpg-nggid03517-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193'
+      PHOTO_ASSETS.mandolin
     ]
   },
   {
     id: 'proj-05',
-    title: 'Executive Portrait & Leadership Suite',
-    clientCompany: 'Vance & Co. Luxury Goods',
-    category: 'People & Portrait',
-    thumbnail: 'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193',
+    title: 'Private Reserve Wine Bar & Evening Hospitality',
+    clientCompany: 'Vance Hospitality Group',
+    category: 'Food Photography',
+    thumbnail: PHOTO_ASSETS.restaurant,
     status: 'Final Approved',
     tabCategory: 'completed',
     shootDate: 'Sep 25, 2026',
-    shootTime: '1:00 PM – 4:00 PM CST',
-    shootType: 'Studio',
-    locationAddress: 'Nagle Photography Studio, 1420 W Fulton Market, Chicago, IL 60607',
-    description: 'Executive portrait session for C-suite management team, annual report release, and Forbes feature interview editorial profile.',
-    estimatedPhotos: 12,
-    budgetQuote: '$2,900.00 USD (Completed & Paid)',
+    shootTime: '6:00 PM – 10:00 PM CST',
+    shootType: 'On Location',
+    locationAddress: 'Reserve Lounge, 110 N Wacker Dr, Chicago, IL 60606',
+    description: 'Dynamic event and fine dining ambiance capture showcasing champagne ice buckets, curated wine bottles, and motion-blurred server service.',
+    estimatedPhotos: 14,
+    budgetQuote: '$3,100.00 USD (Completed & Paid)',
     createdDate: 'Sep 10, 2026',
-    galleryId: 'gal-04',
+    galleryId: 'gal-05',
     timeline: [
-      { step: 1, label: 'Request Submitted', description: 'Executive bio and wardrobe guide submitted.', date: 'Sep 10', completed: true, current: false },
-      { step: 2, label: 'Project Confirmed', description: 'Hair/makeup stylist booked.', date: 'Sep 15', completed: true, current: false },
-      { step: 3, label: 'Photography Shoot', description: 'Studio portrait session wrapped.', date: 'Sep 25', completed: true, current: false },
-      { step: 4, label: 'Photos Uploaded', description: 'Initial contact sheet uploaded.', date: 'Oct 02', completed: true, current: false },
-      { step: 5, label: 'Client Review', description: '4 executive selects approved.', date: 'Oct 05', completed: true, current: false },
-      { step: 6, label: 'Final Delivery', description: 'Final high-end retouches delivered.', date: 'Oct 08', completed: true, current: false },
+      { step: 1, label: 'Request Submitted', description: 'Evening hospitality brief.', date: 'Sep 10', completed: true, current: false },
+      { step: 2, label: 'Project Confirmed', description: 'Service hours access arranged.', date: 'Sep 15', completed: true, current: false },
+      { step: 3, label: 'Photography Shoot', description: 'Live dinner service shoot wrapped.', date: 'Sep 25', completed: true, current: false },
+      { step: 4, label: 'Photos Uploaded', description: 'Proofs ready.', date: 'Oct 02', completed: true, current: false },
+      { step: 5, label: 'Client Review', description: 'Hero selections approved.', date: 'Oct 04', completed: true, current: false },
+      { step: 6, label: 'Final Delivery', description: 'Web and editorial archives delivered.', date: 'Oct 06', completed: true, current: false },
     ],
     requirements: [
-      'Rembrandt key light with subtle hair rim light against dark slate backdrop.',
-      'Natural frequency separation skin retouching (retaining authentic skin texture).',
-      'Both color and monochrome master exports.'
+      'Kinetic motion blur conveying the energy of professional dining service.',
+      'Crisp bottle labeling on champagne and vintage wine collection.',
+      'Warm ambient lighting capturing modern private dining room aesthetic.'
     ],
     referenceImages: [
-      'https://nagleweb.com/wp-content/gallery/peopleproductetc/cache/01.31.17_rick_bayless_img_1311__large.jpg-nggid03495-ngg0dyn-800x600-00f0w010c010r110f110r010t010.jpg?t=1585860193'
+      PHOTO_ASSETS.restaurant
     ]
   }
 ];
@@ -784,8 +749,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'studio-joe',
       senderName: 'Joe Nagle',
       senderRole: 'Principal Photographer',
-      senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      text: 'Good morning Marcus! We wrapped the studio session yesterday. The lighting on the amber glass serum series is looking extraordinary.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Good morning Marcus! We wrapped the studio session yesterday. The raking lighting on the selvage denim texture came out exceptionally sharp.',
       timestamp: 'Nov 1, 9:30 AM',
       isClient: false,
     },
@@ -795,8 +760,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'client-marcus',
       senderName: 'Marcus Vance',
       senderRole: 'Creative Director',
-      senderAvatar: INITIAL_CLIENT_PROFILE.avatar,
-      text: 'Fantastic to hear Joe! Did you get a chance to capture the macro water bead detail on the mist bottle as we discussed in the brief?',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Fantastic Joe! Did you get a chance to capture the copper rivet detailing and waistband patch as we specified in the brief?',
       timestamp: 'Nov 1, 10:15 AM',
       isClient: true,
     },
@@ -806,14 +771,14 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'studio-joe',
       senderName: 'Joe Nagle',
       senderRole: 'Principal Photographer',
-      senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      text: 'Yes! We used the 90mm Macro with micro glycerine droplets. The proofs are now live in your private gallery under Summer Product Campaign.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Yes! We used the 100mm Macro with fine directional fill. The proofs are now live in your private gallery under Commercial Denim & Apparel Catalog.',
       timestamp: 'Nov 1, 11:00 AM',
       isClient: false,
       attachment: {
         type: 'image',
-        name: 'NAGLE_PROD_SUMMER_002_preview.jpg',
-        url: 'https://images.unsplash.com/photo-1608248597359-00109f3e4948?auto=format&fit=crop&w=600&q=80',
+        name: 'NAGLE_DENIM_STUDIO_001.ARW',
+        url: PHOTO_ASSETS.denim,
         size: '18.4 MB'
       }
     },
@@ -823,8 +788,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'client-marcus',
       senderName: 'Marcus Vance',
       senderRole: 'Creative Director',
-      senderAvatar: INITIAL_CLIENT_PROFILE.avatar,
-      text: 'Incredible work! I just reviewed the gallery and submitted feedback on the clay jar shadow. Once that’s adjusted we are ready to approve the final batch.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Incredible work! I just reviewed the gallery and submitted feedback on the indigo curve. Once that’s finalized we are ready to approve the master set.',
       timestamp: 'Nov 1, 5:15 PM',
       isClient: true,
     },
@@ -834,8 +799,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'studio-elena',
       senderName: 'Elena Rostova',
       senderRole: 'Lead Retoucher',
-      senderAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-      text: 'Hi Marcus, I received your note on photo #003 regarding the Pantone 7527 C cap calibration and softened gradient. I am finalizing the revised proof right now.',
+      senderAvatar: '/photos/mandolin_studio.png',
+      text: 'Hi Marcus, I received your note on photo #003 regarding the PANTONE fabric calibration. I am finalizing the revised proof right now.',
       timestamp: 'Nov 1, 5:48 PM',
       isClient: false,
     }
@@ -847,8 +812,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'studio-joe',
       senderName: 'Joe Nagle',
       senderRole: 'Principal Photographer',
-      senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      text: 'Marcus, proofs from our Riverwalk shoot are uploaded. The natural morning haze gave the bridge shots a wonderful cinematic texture.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Marcus, proofs from our residential garden shoot are uploaded. The natural morning light really showcased the utility cart and the red petunias beautifully.',
       timestamp: 'Oct 28, 2:00 PM',
       isClient: false,
     },
@@ -858,8 +823,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'client-marcus',
       senderName: 'Marcus Vance',
       senderRole: 'Creative Director',
-      senderAvatar: INITIAL_CLIENT_PROFILE.avatar,
-      text: 'Checking them now. The trench coat silhouette in shot #001 is perfection.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'Reviewing them now. The composition on shot #001 is exactly what we needed for the home catalog.',
       timestamp: 'Oct 28, 3:20 PM',
       isClient: true,
     }
@@ -871,8 +836,8 @@ export const INITIAL_MESSAGES: Record<string, ChatMessage[]> = {
       senderId: 'studio-joe',
       senderName: 'Joe Nagle',
       senderRole: 'Principal Photographer',
-      senderAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      text: 'We have reserved the Fulton Market Main Stage for November 18th. Our grip team will have the high-speed strobe rig built by 8:00 AM so we can begin shooting promptly at 9:00 AM.',
+      senderAvatar: '/photos/central_camera_chicago.png',
+      text: 'We have finalized our schedule for Central Camera Co. on Wabash Ave for Nov 18. Looking forward to capturing the architectural marquee series.',
       timestamp: 'Oct 30, 11:45 AM',
       isClient: false,
     }
@@ -883,7 +848,7 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'n-1',
     title: 'New Retouched Proof Ready',
-    message: 'Elena updated photo NAGLE_PROD_SUMMER_003 with requested shadow gradient adjustment.',
+    message: 'Elena updated photo NAGLE_DENIM_STUDIO_003 with requested indigo tone balance.',
     timestamp: '15 mins ago',
     dateGroup: 'Today',
     isRead: false,
@@ -894,7 +859,7 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'n-2',
     title: 'New Gallery Proofs Uploaded',
-    message: '8 high-resolution proofs for Summer Product Campaign have been published to your private portal.',
+    message: 'High-resolution proofs for Commercial Denim & Apparel Catalog have been published.',
     timestamp: '2 hours ago',
     dateGroup: 'Today',
     isRead: false,
@@ -905,7 +870,7 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'n-3',
     title: 'Shoot Booking Confirmed',
-    message: 'Spring Advertising Campaign is confirmed for Nov 18, 2026 at Nagle Main Stage Studio.',
+    message: 'Chicago Architectural Heritage — Central Camera Co. is confirmed for Nov 18, 2026.',
     timestamp: 'Yesterday at 3:45 PM',
     dateGroup: 'Yesterday',
     isRead: true,
@@ -916,7 +881,7 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'n-4',
     title: 'Quotation Received',
-    message: 'Joe Nagle attached production quotation and equipment breakdown for Spring Advertising Campaign.',
+    message: 'Joe Nagle attached production breakdown for Chicago Architectural Heritage series.',
     timestamp: 'Oct 30, 10:15 AM',
     dateGroup: 'Earlier',
     isRead: true,
@@ -927,8 +892,8 @@ export const INITIAL_NOTIFICATIONS: NotificationItem[] = [
   {
     id: 'n-5',
     title: 'Final Assets Delivered',
-    message: 'Culinary Artisanal Menu Series TIFF master archive has been packaged and approved.',
-    timestamp: 'Oct 18, 4:20 PM',
+    message: 'Handcrafted Archtop Mandolin Studio Shoot master archive approved and delivered.',
+    timestamp: 'Oct 16, 4:20 PM',
     dateGroup: 'Earlier',
     isRead: true,
     type: 'photos_approved',

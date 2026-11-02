@@ -38,8 +38,8 @@ export const BookingWizardScreen: React.FC = () => {
   const [shootType, setShootType] = useState<'Studio' | 'On Location'>('Studio');
   const [locationAddress, setLocationAddress] = useState('Nagle Photography Studio, Chicago, IL');
   const [referenceImages, setReferenceImages] = useState<string[]>([
-    'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80',
-    'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80'
+    '/photos/denim_apparel.png',
+    '/photos/mandolin_studio.png'
   ]);
   const [creativeBriefName, setCreativeBriefName] = useState('Brand_Lookbook_Creative_Brief_v2.pdf');
   const [submittedProjectId, setSubmittedProjectId] = useState<string | null>(null);
@@ -62,9 +62,9 @@ export const BookingWizardScreen: React.FC = () => {
 
   const handleAddSampleReference = () => {
     const samples = [
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1608248597359-00109f3e4948?auto=format&fit=crop&w=400&q=80',
-      'https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=400&q=80'
+      '/photos/garden_lifestyle.png',
+      '/photos/restaurant_event.png',
+      '/photos/central_camera_chicago.png'
     ];
     const nextImg = samples[referenceImages.length % samples.length];
     setReferenceImages(prev => [...prev, nextImg]);
@@ -81,7 +81,7 @@ export const BookingWizardScreen: React.FC = () => {
       title: projectTitle || `${category} Campaign`,
       clientCompany: brandName || clientProfile.company,
       category,
-      thumbnail: selectedCategoryObj?.image || referenceImages[0] || 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80',
+      thumbnail: selectedCategoryObj?.image || referenceImages[0] || '/photos/denim_apparel.png',
       shootDate,
       shootType,
       locationAddress: shootType === 'Studio' ? 'Nagle Photography Studio, 1420 W Fulton Market, Chicago, IL 60607' : locationAddress,
